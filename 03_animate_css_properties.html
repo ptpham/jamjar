@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Animation Example</title>
+<style>
+  /* Animating CSS properties is good for UI elements. */
+
+  /* Container for the animated box */
+  .container {
+    width: 100%;
+    height: 200px;
+    position: relative;
+  }
+
+  /* The animated box */
+  .box {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    position: absolute;
+    animation: moveAndChangeColor 5s infinite;
+  }
+
+  /* Keyframes for the animation */
+  @keyframes moveAndChangeColor {
+    0% {
+      left: 0;
+      background-color: blue;
+    }
+    50% {
+      left: calc(100% - 50px);
+      background-color: red;
+    }
+    100% {
+      left: 0;
+      background-color: blue;
+    }
+  }
+</style>
+</head>
+<div class="container">
+    <div class="box"></div>
+</div>

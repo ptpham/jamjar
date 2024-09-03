@@ -1,0 +1,41 @@
+<meta charset="UTF-8">
+<title>Canvas API Example</title>
+<style>
+  canvas {
+    border: 2px solid #000;
+  }
+</style>
+<canvas id="canvas" width="400" height="400"></canvas>
+
+<script>
+  // Get the drawing context (2D)
+  const ctx = canvas.getContext('2d');
+
+  const {width, height} = canvas;
+
+  // Clear any existing content on canvas
+  ctx.clearRect(0, 0, width, height);
+
+  // Draw a rectangle
+  ctx.fillStyle = '#FF0000';  // Red color
+  ctx.fillRect(50, 50, 150, 100);
+
+  // Draw a circle
+  ctx.beginPath();
+  ctx.arc(300, 100, 50, 0, 2 * Math.PI);  // x, y, radius, startAngle, endAngle
+  ctx.fillStyle = '#00FF00';  // Green color
+  ctx.fill();
+
+  // Draw a line
+  ctx.beginPath();
+  ctx.moveTo(50, 250);  // Starting point
+  ctx.lineTo(350, 350);  // Ending point
+  ctx.strokeStyle = '#0000FF';  // Blue color
+  ctx.lineWidth = 5;
+  ctx.stroke();
+
+  // Draw text
+  ctx.font = '30px Arial';
+  ctx.fillStyle = '#000000';  // Black color
+  ctx.fillText('Hello Canvas', 100, 200);
+</script>

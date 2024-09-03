@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+<title>CSS Sprite Animation</title>
+<style>
+  /*
+    It's possible to make a sprite animation by changing the background-position
+    CSS property on an appropriately defined image. The image has one frame
+    every 100 pixels horizontally.
+  */
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .sprite {
+    width: 100px;
+    height: 100px;
+    background-image: url('04_sprite.png');
+    background-repeat: no-repeat;
+    border: 1px solid black;
+    animation: play 1s steps(4) infinite;
+  }
+
+  @keyframes play {
+    from { background-position: 0px; }
+    to { background-position: -400px; }
+  }
+</style>
+<div class="sprite"></div>

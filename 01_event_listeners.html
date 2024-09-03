@@ -1,0 +1,14 @@
+
+<meta charset="UTF-8">
+<title>Event Listeners Example</title>
+
+<p id="text">Click the button to change this text.</p>
+<button id="myButton">Click Me!</button>
+
+<script>
+  // Event listeners are used to change state on user interaction.
+  // Note that myButton matches the id of the button in HTML.
+  myButton.addEventListener('click', function() {
+      text.textContent = 'You clicked the button! The text has changed.';
+  });
+</script>
