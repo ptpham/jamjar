@@ -2,13 +2,25 @@
 <meta charset="UTF-8">
 <title>Event Listeners Example</title>
 
+<style>
+  .red-class {
+    color: red;
+  }
+</style>
+
 <p id="text">Click the button to change this text.</p>
 <button id="myButton">Click Me!</button>
+
+<button id="redButton">Make Red</button>
 
 <script>
   // Event listeners are used to change state on user interaction.
   // Note that myButton matches the id of the button in HTML.
-  myButton.addEventListener('click', function() {
+  myButton.addEventListener('click', () => {
       text.textContent = 'You clicked the button! The text has changed.';
+  });
+
+  redButton.addEventListener('click', () => {
+    text.classList.add('red-class');
   });
 </script>
